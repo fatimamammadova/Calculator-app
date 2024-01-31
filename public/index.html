@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/scss/style.css">
+    <title>Calculator</title>
+</head>
+<body>
+
+
+    <div id="calculator">
+        <div class="calculator">
+            <div class="calculator-wrapper">
+                <div class="calculator-heading">
+                    <h1 class="title">calc</h1>
+                    <div class="theme">
+                        <div class="range-input">
+                            <div class="steps">
+                                <span id="stepOne">1</span>
+                                <span id="stepTwo">2</span>
+                                <span id="stepThree">3</span>
+                            </div>
+                            <div class="theme-input">
+                                <span class="circle"> </span>
+                                <div class="theme-buttons">
+                                    <button type="button" class="theme theme1"></button>
+                                    <button type="button" class="theme theme2"></button>
+                                    <button type="button" class="theme theme3"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator-input">
+                    <input type="text" class="input" value="" disabled>
+                </div>
+                <div class="calculator-keys">
+                    <button type="button" value="7" class="number">7</button>
+                    <button type="button" value="8" class="number">8</button>
+                    <button type="button" value="9" class="number">9</button>
+                    <button type="button" value="delete" class="delete">DEL</button>
+                
+                    <button type="button" value="4" class="number">4</button>
+                    <button type="button" value="5" class="number">5</button>
+                    <button type="button" value="6" class="number">6</button>
+                    <button type="button" value="+" class="operator">+</button>
+        
+                    <button type="button" value="1" class="number">1</button>
+                    <button type="button" value="2" class="number">2</button>
+                    <button type="button" value="3" class="number">3</button>
+                    <button type="button" value="-" class="operator">-</button>
+        
+                    <button type="button" value="." class="decimal">.</button>
+                    <button type="button" value="0" class="number">0</button>
+                    <button type="button" value="/" class="operator">/</button>
+                    <button type="button" value="*" class="operator">x</button>
+        
+                    <button type="button" value="reset" class="reset">RESET</button>
+                    <button type="button" value="=" class="equal-sign">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+    <script src="../src/js/script.js"></script>
+</body>
+</html>

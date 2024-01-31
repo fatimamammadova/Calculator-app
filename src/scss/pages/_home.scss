@@ -1,0 +1,185 @@
+#calculator {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    .calculator {
+        width: 327px;
+        margin: 20px 0;
+        padding: 0 5px;
+        transition: all .2s linear;
+        @media (min-width: 576px) {
+            width: 540px;
+        }
+        .calculator-wrapper {
+            .calculator-heading {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 30px;
+                h1 {
+                    padding-left: 8px;
+                    color: var(--input-color);
+                }
+                .theme {
+                    .range-input {
+                        .steps {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-end;
+                            width: 70px;
+                            padding: 0 10px;
+                            margin-bottom: 3px;
+                            color: var(--input-color);
+                            span {
+                                font-size: 1.2rem;
+                                text-align: center;
+                            }
+                        }
+                        .theme-input {
+                            position: relative;
+                            background-color: var(--toggle-background);
+                            height: 26px;
+                            border-radius: 20px;
+                            cursor: pointer;
+                            .circle {
+                                display: block;
+                                position: absolute;
+                                top: 5px;
+                                transform: translateX(5px);
+                                z-index: 1;
+                                width: 16px;
+                                height: 16px;
+                                border-radius: 50%;
+                                background-color: var(--toggle);
+                                transition: all .3s ease;
+                                &:hover {
+                                    background-color: var(--toggle-hover);
+                                }
+                            }
+                            &::before {
+                                content: "THEME";
+                                position: absolute;
+                                top: 50%;
+                                left: -68px;
+                                transform: translateY(-50%);
+                                color: var(--input-color);
+                                font-weight: 600;
+                                font-size: 1.4rem;
+                                text-align: center;
+                            }
+
+                            .theme-buttons {
+                                width: 100%;
+                                display: flex;
+                                height: 100%;
+                                .theme {
+                                    border: none;
+                                    background-color: transparent;
+                                    width: 33.3333%;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .calculator-input {
+                margin-bottom: 23px;
+                height: 130px;
+                input {
+                    height: 100%;
+                    width: 100%;
+                    padding: 30px;
+                    text-align: right;
+                    font-size: 6rem;
+                    color: var(--input-color);
+                    background-color: var(--screen-background);
+                    border: none;
+                    border-radius: 10px;
+                }
+            }
+            .calculator-keys {
+                width: 100%;
+                height: 420px;
+                border-radius: 10px;
+                padding: 24px;
+                background-color: var(--keypad-background);
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                grid-gap: 13px;
+                @media (min-width: 576px) {
+                    height: 480px;
+                    padding: 30px;
+                    grid-gap: 25px;
+                }
+                button {
+                    height: 60px;
+                    font-size: 3.2rem;
+                    border: none;
+                    border-radius: 5px;
+                    color: var(--key-color);
+                    text-align: center;
+                    background-color: var(--key-background-btn);
+                    box-shadow: 0px 4px var(--key-shadow-btn);
+                    transition: background-color .1s linear;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: var(--key-hover-btn);
+                    }
+                    &.button-hover {
+                        background-color: var(--key-hover-btn);
+                    }
+                    @media (min-width: 576px) {
+                        border-radius: 10px;
+                    }
+                    &.delete {
+                        color: var(--white);
+                        background-color: var(--key-background-del);
+                        box-shadow: 0px 4px var(--key-shadow-del);
+                        transition: background-color .1s linear;
+                        font-size: 2.8rem;
+                        @media (min-width: 576px) {
+                            font-size: 3.2rem;
+                        }
+                        &:hover {
+                            background-color: var(--key-hover-del);
+                        }
+                        &.delete-hover {
+                            background-color: var(--key-hover-del);
+                        }
+                    }
+                    &.reset {
+                        color: var(--white);
+                        background-color: var(--key-background-del);
+                        box-shadow: 0px 4px var(--key-shadow-del);
+                        grid-column: 1 / span 2;
+                        transition: background-color .1s linear;
+                        font-size: 2.8rem;
+                        @media (min-width: 576px) {
+                            font-size: 3.2rem;
+                        }
+                        &:hover {
+                            background-color: var(--key-hover-del);
+                        }
+                        &.reset-hover {
+                            background-color: var(--key-hover-del);
+                        }
+                    }
+                    &.equal-sign {
+                        color: var(--white);
+                        background-color: var(--key-background-equal);
+                        box-shadow: 0px 4px var(--key-shadow-equal);
+                        grid-column: 3 / span 2;
+                        transition: background-color .1s linear;
+                        &:hover {
+                            background-color: var(--key-hover-equal);
+                        }
+                        &.equal-hover {
+                            background-color: var(--key-hover-equal);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
